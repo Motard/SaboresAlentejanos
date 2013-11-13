@@ -23,19 +23,19 @@
        	</div>
         <div class="nomePrdt">
         	<a href="produto.php?produto=<?php echo $row['id'] ?>">
-       			<h3 class="hPrdt" style="color:black"><?php echo $row['nome'];?></h3>	
+       			<h3 class="hPrdt"><?php echo $row['nome'];?></h3>	
           	</a>
         </div>
         <div class="descPeqPrdt">
 			<?php echo $row['descricaoPeq'];?>
        	</div>				
 		<div class="preco">
-        	<span style="color:#999;font-size:10px">PREÇO</span>
-			<?php echo "€ ".$row['preco'];?>
+        	<span>PREÇO </span>
+			<span class="valor"><?php echo "€ ".$row['preco'];?></span>
       	</div>
         <div class="btVer">
         	<a href="produto.php?produto=<?php echo $row['id']?>" style="text-decoration:none">
-        		<input type="button" class="bt" value="VER PRODUTO">
+        		<input type="button" class="bt" value="Ver Produto">
           	</a>
         </div>
         <div class="separador"></div>

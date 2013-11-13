@@ -420,9 +420,10 @@ textarea:focus{
 .fotoPrdt {
 	width:150px;
 	height:150px;
-	border:1px solid grey;
+	border:1px solid #302117;
 	border-radius:10px;
 	float:left;
+	padding:5px;
 	}
 .imgPrdt {
 	height:100%;
@@ -430,29 +431,50 @@ textarea:focus{
 	margin:0 auto;
 	}
 .nomePrdt {
-	color:black;
 	width:330px;
 	height:40px;
 	text-align:left;
 	float:left;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:14px;
-	font-weight:bold;
 	margin-left:10px;
+	}
+.nomePrdt h3 {
+	display:inline;
+	color:#473323;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+	font-weight:bold;
+	}
+.nomePrdt a:hover {
+	text-decoration:none;
+	}
+.nomePrdt h3:hover{
+	border-bottom:1px solid #473323;
 	}
 .descPeqPrdt {
 	width:330px;
 	height:80px;
 	float:left;
 	margin-left:10px;
-	color:#666666;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:rgba(71,51,35,0.9);
 	}
 .preco {
 	float:left;
 	width:100px;
 	margin-left:30px;
-	font-size:20px;	
+	}
+.preco span{
+	color:rgba(71,51,35,0.7);
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:baseline;
+	}
+.preco .valor{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;	
 	font-weight:bold;
+	color:#B27646;
 	}
 .btVer {
 	float:right;
@@ -464,7 +486,10 @@ textarea:focus{
 	margin:0 auto;
 	clear:both;
 	border-bottom:1px dashed grey;
-	margin-bottom:10px;
+	margin-bottom:20px;
+	}
+.separador:last-of-type {
+	border-bottom:none;
 	}
 /*########################################################*/
 /*##################   CSS DO PRODUTO   ##################*/
