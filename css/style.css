@@ -501,23 +501,35 @@ textarea:focus{
 	height:40px;
 	text-align:left;
 	float:left;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	font-size:14px;
-	font-weight:bold;
 	margin-left:10px;
+	}
+#nomePrdt h3 {
+	display:inline;
+	color:#473323;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+	font-weight:bold;
 	}
 #fotoPrdt {
 	width:200px;
 	height:200px;
-	border:1px solid grey;
+	border:1px solid #473323;
 	border-radius:10px;
 	float:left;
+	padding:5px;
 	overflow:hidden;
 	}
 #imgPrdt {
 	height:100%;
 	display:block;
 	margin:0 auto;
+	}
+#nPrdts {
+	border:1px solid #473323;
+	background-color:rgba(255,183,126,0.3);
+	width:20px;
+	text-align:right;
+	padding-right:5px;
 	}
 #nPrdts:hover{
 	cursor:pointer;
@@ -527,7 +539,9 @@ textarea:focus{
 	height:100px;
 	float:left;
 	margin-left:10px;
-	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:rgba(71,51,35,0.9);
 	}
 #btAdd {
 	width:280px;
@@ -538,14 +552,24 @@ textarea:focus{
 #quantidade{
 	width:112px;
 	height:2em;
-	float:left;	
+	float:left;
+	margin-top:-5px;	
 }
+#quantidade span{
+	color:rgba(71,51,35,0.7);
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	vertical-align:baseline;
+	}
 #alteraQuan {
 	width:10px;
 	height:40px;
 	float:left;
 	margin-left:5px;
-	margin-top:-5px;
+	margin-top:-10px;
+	}
+#menos {
+	padding-left:2px;
 	}
 #zoom {
 	float:left;

@@ -23,7 +23,7 @@
        	</div>
         <div class="nomePrdt">
         	<a href="produto.php?produto=<?php echo $row['id'] ?>">
-       			<h3 class="hPrdt"><?php echo $row['nome'];?></h3>	
+       			<h3><?php echo $row['nome'];?></h3>	
           	</a>
         </div>
         <div class="descPeqPrdt">

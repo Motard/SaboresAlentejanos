@@ -27,16 +27,16 @@
             <?php echo $row['descricaoLng'];?>
         </div>				
         <div class="preco">
-            <span style="color:#999;font-size:10px">PREÇO</span>
-            <?php echo "€ ".$row['preco'];?>
+            <span>PREÇO </span>
+            <span class="valor"><?php echo "€ ".$row['preco'];?></span>
         </div>
         <div id="quantidade">
-            <span style="color:#999;font-family:georgia;font-size:10px;font-weight:bold">QUANTIDADE</span>
-            <input id="nPrdts" class="input" type="text" maxlength="2" value="1" readonly onclick="quantidade()">
+            <span>QUANTIDADE </span>
+            <input id="nPrdts" type="text" maxlength="2" value="1" readonly onclick="quantidade()" title="Alterar Quantidade">
         </div>
         <div id="alteraQuan"></div>
         <div id="btAdd">
-            <input id="adicionarPrdt" class="bt" type="button" produto="<?php echo $row['id']?>" value="ADICIONAR AO CESTO DE COMPRAS">
+            <input id="adicionarPrdt" class="bt" type="button" produto="<?php echo $row['id']?>" value="Adicionar ao Cesto de Compras">
         </div>
 	</div>
     <div style="clear:both;"></div>
