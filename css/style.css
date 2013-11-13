@@ -1,0 +1,785 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*########################################################*/
+/*##############   RESET DOS ELEMENTOS   #################*/
+/*########################################################*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: bottom;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration:none;
+	color:grey;
+	}
+*:focus {
+	outline:none;
+	}
+/*########################################################*/
+/*###########  FIM DO RESET DOS ELEMENTOS ################*/
+/*########################################################*/
+/*########################################################*/
+/*#################  CSS DO INDEX.PHP    #################*/
+/*########################################################*/
+
+#banner{
+	width:100%;
+	/*height:370px;*/
+	height:auto;
+	/*background-color:#333;*/
+	}
+#produto {
+	width:378px;
+	height:225px;
+	/*background-color:#CCC;*/
+	float:left;
+	border-top:1px solid #473323;	
+	border-left:1px solid #473323;
+	border-bottom:1px solid #473323;
+	border-radius:5px;
+	padding:10px;	
+	}
+#descricao {
+	width:189px;
+	height:235px;
+	/*background-color:#999;*/
+	float:left;	
+	border-top:1px solid #473323;	
+	border-right:1px solid #473323;	
+	border-bottom:1px solid #473323;
+	border-radius:5px;		
+	padding:5px;
+	}
+#sobre{
+	clear:both;
+	width:590px;
+	overflow:auto;
+	padding:5px;
+	text-align:justify;
+	color:#473323;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	line-height:1.2;
+	}
+/*############## FIM CSS DO INDEX.PHP    #################*/
+/*########################################################*/
+h3 {
+	font-size:20px;
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+#texto p {
+	margin-bottom:3px;
+	text-align:justify;
+	color:#333333;
+	}
+#texto img {
+	display:block;
+	margin:20px auto;
+	border-radius:10px;
+	border:1px solid black;
+	}
+#imagem p {
+	width:100%;
+	padding-left:25px;
+	margin-top:-16px;
+	font-size:10px;
+	color:grey;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+a:hover {
+	cursor:pointer;
+	color:black;
+	text-decoration:underline;
+	}
+header {
+	width:900px;
+	height:105px;
+	background-image:url(../imagens/header.png);
+	margin:0px auto;
+	font-family:"Courier New", Courier, monospace;
+	font-size:11px;
+	color:grey;
+	}
+#login {
+	width:231px;
+	position:relative;
+	top:3px;
+	left:441px;
+	text-align:right;
+	}
+#login a:hover {
+	cursor:pointer;
+	text-decoration:underline;
+	}
+#logoff {
+	background-color:#CCC;
+	border-radius:5px;
+	padding:0 4px;
+	}
+#conta {
+	width:120px;
+	position:relative;
+	top:-8px;
+	left:689px;
+	color:grey;
+	text-align:left;
+	z-index:1000;
+	}
+#conta ul {
+	list-style:none;
+	}
+#conta ul li ul {
+	width:130px;
+	position:absolute;
+	display:none;
+	margin-top:3px;
+	margin-left:-9px;
+	padding-bottom:5px;
+	padding-left:5px;
+	background-color:white;
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+	border-bottom:1px solid grey;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	}
+#conta ul ul li {
+	padding-top:7px;
+	text-align:left;
+	}
+#nav-bottom {
+	position:relative;
+	width:325px;
+	top:69px;
+	left:325px;
+	}
+#nav-bottom ul li{
+	float:left;
+	margin-right:10px;
+	}
+.nav-bottom{
+	color:white;
+	}
+#procura {
+	position:relative;
+	top:43px;
+	left:676px;
+	width:217px;
+	font-family:"Comic Sans MS", cursive;
+	font-size:14px;
+	}
+#procura input {
+	border:none;
+	}
+#formBusca {
+	border:none;
+	}
+#procura input:focus {
+	outline:none;
+	}
+#busca{
+	margin-top:0px;
+	}
+#buscaIconBox {
+	position:relative;
+	top:-20px;
+	left:195px;
+	width:23px;
+	}
+#cart {
+	position:relative;
+	top:-71px;
+	left:822px;
+	width:70px;
+	height:30px;
+	color:black;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:18px;
+	border-radius:5px;
+	/*background-color:rgba(198,168,120,0.8);*/
+	background-color:rgba(179,99,35,0.8);
+	box-shadow:2px 2px 3px #999;
+	}
+#cartLogo:hover {
+	cursor:pointer;
+	}
+#artigos {
+	float:right;
+	margin-top:8px;
+	margin-right:8px;
+	text-align:right;
+	}
+#topoLeft {
+	width:300px;
+	height:3em;
+	}
+#topoCenter {
+	width:600px;
+	/*height:2em;*/
+	/*color:#F7B27B;*/
+	}
+#aviso{
+	background-color:#302117;
+	padding-top:3px;
+	padding-bottom:3px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	text-align:center;
+	color:#E39932;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	/*margin-top:-3px;*/
+	}
+article {
+	width:900px;
+	overflow:auto;
+	margin:0 auto;
+		}
+/*########################################################*/
+/*##################  CSS DO _LEFTBAR    #################*/
+/*########################################################*/
+nav {
+	width:270px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:600;
+	margin-right:30px;
+	}
+nav a {
+	color:#473323;
+	}
+nav a:hover{
+	color:#473323;
+	}
+#menuP {
+	width:100%;
+	background-color:#473323;
+	text-align:center;
+	padding:5px 0px;
+	border-bottom:1px solid #473323;
+	color:#F7B27B;
+	letter-spacing:2px;
+	/*color:white;*/
+	}
+/*nav ul li:hover {
+	text-decoration:underline;
+	}*/
+#center {
+	width:600px;
+	}
+.content {
+	float:left;
+	}
+nav ul {
+	border:1px solid #473323;
+	border-radius:5px;
+	padding-bottom:5px;
+	}
+nav li {
+	list-style:none;
+	padding-top:7px;
+	padding-left:5px;
+	}
+/*nav li:hover {
+	cursor:pointer;
+	}*/
+/*########################################################*/
+.bt {
+	border:1px solid rgba(71,51,35,0.2);
+	border-radius:4px;
+	padding:4px 10px;
+	background-color:#F14408;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:white;
+	}
+.bt:hover {
+	border:1px solid rgba(71,51,35,1);
+	/*background-color:rgba(198,161,120,0.7);*/
+	cursor:pointer;
+	color:black;
+	}
+.bt:focus{
+	outline:none;
+	border:1px solid grey;
+	}
+/*########################################################*/
+/*####################  CSS DOS FORMS    #################*/
+/*########################################################*/
+form {
+	border:1px solid #473323;
+	border-radius:5px;
+	padding-bottom:10px;
+	}
+form p{
+	text-align:center;
+	background-color:#473323;
+	padding:5px 0px;
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#F7B27B;
+	margin-bottom:10px;
+	}
+form fieldset legend {
+	background-color:#302117;
+	color:white;
+	padding:5px;
+	margin-left:10px;
+	border-radius:3px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	}
+form fieldset table {
+	margin-top:20px;
+	margin-left:70px;
+	}
+form table tr {
+	height:55px;
+	}
+fieldset {
+	border:1px solid #302117;
+	margin:20px;
+	padding-bottom:20px;
+	}
+label {
+	color:#473323;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	margin:10px;
+	}
+textarea {
+	padding-left:5px;
+	height:3em;
+	max-height:3em;
+	width:199px;
+	max-width:199px;
+	border:1px solid #302117;	
+	}
+.input {
+	border:1px solid #302117;
+	padding-left:5px;
+	width:200px;
+	background-color:rgba(255,183,126,0.3);
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	padding-top:3px;
+	padding-bottom:3px;
+	}
+.input:focus{
+	outline:none;
+	border:1px solid #E39932;
+	}
+textarea:focus{
+	outline:none;
+	border:1px solid #E39932;
+	}
+/*########################################################*/
+/*###########   CSS DA GALERIA  DE PRODUTOS   ############*/
+/*########################################################*/
+.fotoPrdt {
+	width:150px;
+	height:150px;
+	border:1px solid grey;
+	border-radius:10px;
+	float:left;
+	}
+.imgPrdt {
+	height:100%;
+	display:block;
+	margin:0 auto;
+	}
+.nomePrdt {
+	color:black;
+	width:330px;
+	height:40px;
+	text-align:left;
+	float:left;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:10px;
+	}
+.descPeqPrdt {
+	width:330px;
+	height:80px;
+	float:left;
+	margin-left:10px;
+	color:#666666;
+	}
+.preco {
+	float:left;
+	width:100px;
+	margin-left:30px;
+	font-size:20px;	
+	font-weight:bold;
+	}
+.btVer {
+	float:right;
+	margin-right:30px;
+	}
+.separador {
+	width:400px;
+	height:20px;
+	margin:0 auto;
+	clear:both;
+	border-bottom:1px dashed grey;
+	margin-bottom:10px;
+	}
+/*########################################################*/
+/*##################   CSS DO PRODUTO   ##################*/
+/*########################################################*/
+
+#nomePrdt {
+	color:black;
+	width:280px;
+	height:40px;
+	text-align:left;
+	float:left;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:10px;
+	}
+#fotoPrdt {
+	width:200px;
+	height:200px;
+	border:1px solid grey;
+	border-radius:10px;
+	float:left;
+	overflow:hidden;
+	}
+#imgPrdt {
+	height:100%;
+	display:block;
+	margin:0 auto;
+	}
+#nPrdts:hover{
+	cursor:pointer;
+	}
+#descLngPrdt {
+	width:280px;
+	height:100px;
+	float:left;
+	margin-left:10px;
+	color:#666;
+	}
+#btAdd {
+	width:280px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	}
+#quantidade{
+	width:112px;
+	height:2em;
+	float:left;	
+}
+#alteraQuan {
+	width:10px;
+	height:40px;
+	float:left;
+	margin-left:5px;
+	margin-top:-5px;
+	}
+#zoom {
+	float:left;
+	margin-right:-25px;
+	padding-top:5px;
+	padding-left:5px;
+	}
+/*########################################################*/
+/*###########   CSS DO CARRINHO DE COMPRAS    ############*/
+/*########################################################*/
+.imagemPrdt{
+	margin:5px;
+	width:50px;
+	height:50px;
+	float:left;
+	}
+.precoUni {
+	font-size:18px;	
+	}
+.precoTotal {
+	font-size:18px;	
+	}
+.quant {
+	width:60px;
+	float:left;
+	}
+.inputQt:hover{
+	cursor:pointer;
+	}
+.apagarPrdt:hover{
+	cursor:pointer;
+	}
+.alteraQuan {
+	width:10px;
+	height:38px;
+	float:left;
+	margin-left:36px;
+	margin-top:-10px;
+	padding-top:5px;
+	}
+.btAlteraQuant:hover {
+	cursor:pointer;
+	}
+.gravarAlteraQuan {
+	float:left;
+	}
+.gravarAlteraQuan:hover {
+	cursor:pointer;
+	}
+/*########################################################*/
+/*################   CSS DO COMPRAR.PHP   ################*/
+/*########################################################*/
+#main{
+	margin:0px auto;
+	width:100%;
+	text-align:center;
+	}
+#navegador{
+	margin:0px auto;
+	width:600px;
+	height:50px;
+	border-bottom:1px solid grey;
+	}
+#navegador ul {
+
+	}
+#navegador ul li{
+	float:left;
+	width:200px;
+	text-align:center;
+	padding:10px 0;
+	}
+#morada {
+	width:300px;
+	margin:0px auto;
+	text-align:left;
+	padding:30px 20px;
+	background-color:#F3F3F3;
+	}
+#continuar {
+	clear:both;
+	}
+/*########################################################*/
+/*################   CSS DO COMPRAR3.PHP   ################*/
+/*########################################################*/	
+#detalhesOrdem{
+	border:1px solid rgba(198,168,120,0.1);
+	border-radius:5px;
+	width:900px;
+	height:auto;
+	overflow:auto;
+	padding:2px 2px;
+	background-color:rgba(198,168,120,0.1);
+	}
+#detalhesEncomenda{
+	width:687px;
+	overflow:visible;
+	float:left;
+	padding:0 5px;
+	border:1px solid rgba(198,168,120,0.3);
+	border-radius:5px;
+	background-color:rgba(198,168,120,0.3);
+	padding-bottom:10px;
+	}
+#custoEncomenda{
+	width:197px;
+	height:300px;
+	float:right;
+	background-color:rgba(198,168,120,0.3);
+	border-radius:5px;
+	border:1px solid rgba(198,168,120,0.3);
+	margin-left:2px;
+	
+	}
+#produtosEncomenda{
+	width:697px;
+	height:auto;
+	overflow:auto;
+	float:left;
+	background-color:rgba(198,168,120,0.3);
+	border-radius:5px;
+	border:1px solid rgba(198,168,120,0.3);
+	margin-top:2px;
+	padding-bottom:20px;
+	}
+bold {
+	font-weight:bold;	
+	}
+.quantFinal{
+	margin:0 auto;
+	width:70px;
+	}
+.alteraQuanFinal {
+	width:10px;
+	height:38px;
+	float:left;
+	margin-left:0px;
+	margin-top:0px;
+	padding-top:5px;
+	}
+.btAlteraQuantFinal:hover {
+	cursor:pointer;
+	}
+.gravarAlteraQuanFinal {
+	float:right;
+	margin-top:8px;
+	}
+.gravarAlteraQuanFinal:hover {
+	cursor:pointer;
+	}
+.inputQ{
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:10px;
+	width:20px;	
+	}
+.altera{
+	color:grey;
+	margin-left:-10px;
+	}
+.altera:hover{
+	cursor:pointer;
+	text-decoration:underline;
+	color:black;
+	}
+.apaga{
+	color:grey;
+	}
+.apaga:hover{
+	cursor:pointer;
+	text-decoration:underline;
+	color:black;
+	}
+/*########################################################*/
+/*###########  CSS DO CONTACOMPRAS.PHP   #################*/
+/*########################################################*/
+.historico{
+	width:700px;
+	margin:10px auto;
+	overflow:auto;
+	border:1px solid #CCCCCC;
+	border-radius:5px;
+	}
+.detalhesOrdem{
+	width:25%;
+	float:left;
+	padding:5px;
+	}
+.resumoOrdem{
+	width:70%;
+	float:right;
+	padding:5px;
+	border-left:1px solid #CCC;	
+	}
+
+/*########################################################
+#############  CSS DO COMPRAFINAL.PHP   ################
+########################################################
+
+#produtos {
+	border:1px solid black;
+	float:left;
+	}
+#preco {
+	border:1px solid black;
+	float:right;
+	}
+#infEncomenda {
+	clear:both;
+	}*/
+/*########################################################*/
+/*################  CSS DOS CONTACTOS   ##################*/
+/*########################################################*/
+#contactos{
+	float:left;
+	}
+#contactosForm{
+	float:right;
+	width:380px;
+	padding:0 10px;
+	}
+#contactosForm textarea {
+		height:4em;
+		max-height:4em;
+	}
+.asterisco {
+	color:#FF6600;
+	}
+/*########################################################*/
+/*##################  CSS DO FOOTER   ####################*/
+/*########################################################*/
+footer{
+	width:900px;
+	margin:10px auto;
+	
+	}
+#footer-banner{
+	width:900px;
+	height:17px;
+	padding-top:8px;
+	background-image:url(../imagens/footer-banner.png);
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-size:9px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:white;
+	}
+#footer-banner p{
+	margin-left:358px;
+	}
+#footer-banner span{
+	float:right;
+	}
+#footer-banner span a{
+	color:white;
+	}
+#footer-contactos{
+	margin-top:15px;
+	text-align:center;
+	color:#473323;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	}
