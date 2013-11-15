@@ -273,7 +273,7 @@ header {
 	}
 article {
 	width:900px;
-	overflow:auto;
+	overflow:visible;
 	margin:0 auto;
 		}
 /*########################################################*/
@@ -586,15 +586,38 @@ textarea:focus{
 	height:50px;
 	float:left;
 	}
+.nomPrdt{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#473323;
+	}
 .precoUni {
-	font-size:18px;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#473323;
+	text-align:left;
+	margin-left:50px;
 	}
 .precoTotal {
-	font-size:18px;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#473323;
+	font-weight:bold;
+	text-align:left;
+	margin-left:50px;
 	}
 .quant {
 	width:60px;
 	float:left;
+	margin-top:13px;
+	}
+.inputQt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#473323;
+	width:15px;
+	text-align:right;
+	padding-right:5px;
 	}
 .inputQt:hover{
 	cursor:pointer;
@@ -607,7 +630,7 @@ textarea:focus{
 	height:38px;
 	float:left;
 	margin-left:36px;
-	margin-top:-10px;
+	margin-top:6px;
 	padding-top:5px;
 	}
 .btAlteraQuant:hover {
@@ -615,6 +638,7 @@ textarea:focus{
 	}
 .gravarAlteraQuan {
 	float:left;
+	margin-top:13px;
 	}
 .gravarAlteraQuan:hover {
 	cursor:pointer;
