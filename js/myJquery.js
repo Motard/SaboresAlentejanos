@@ -55,7 +55,24 @@ $(document).ready(function(e) {
 		window.location.href = "procura.php?produto="+stringProcura;
 		
 	})
-			
+	
+	//*-*-*-*-*			FUNÇÃO PARA MUDAR COR DA SETA		-*-*-*-*-*-*-*-
+	$("#btSetaDir").mouseover(function(){
+		$("#setaDir").attr("src","imagens/seta_dir_black_icon.png");	
+	})
+	
+	$("#btSetaDir").mouseleave(function(){
+		$("#setaDir").attr("src","imagens/seta_dir_white_icon.png");	
+	})
+	
+	$("#btSetaEsq").mouseover(function(){
+		$("#setaEsq").attr("src","imagens/seta_esq_black_icon.png");	
+	})
+	
+	$("#btSetaEsq").mouseleave(function(){
+		$("#setaEsq").attr("src","imagens/seta_esq_white_icon.png");	
+	})
+		
   	//*-*-*--*-*-*-*		FIM DO DOCUMENT READY		-*-*-*-*-*-*-*-*-*- 
 	//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*  
 });

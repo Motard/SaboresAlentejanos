@@ -338,7 +338,7 @@ nav li {
 	border:1px solid rgba(71,51,35,1);
 	/*background-color:rgba(198,161,120,0.7);*/
 	cursor:pointer;
-	color:black;
+	color:#473323;
 	}
 .bt:focus{
 	outline:none;
@@ -580,6 +580,12 @@ textarea:focus{
 /*########################################################*/
 /*###########   CSS DO CARRINHO DE COMPRAS    ############*/
 /*########################################################*/
+.tableCestoCompras{
+	border-bottom:1px dotted #F7B27B;
+	}
+tr:last-of-type td{
+	border-bottom:none;
+	} 
 .imagemPrdt{
 	margin:5px;
 	width:50px;

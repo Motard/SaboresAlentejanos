@@ -5,7 +5,8 @@
 	//**************LIGAR BD USERS E VER SE O COOKIE TEM USER*********//
 	//****************************************************************//
 	?>
-    <a href="index.php" style="text-decoration:none"><input type="button" class="bt" value="Continuar a Comprar"></a>
+    <!--<input type="button" class="bt" value="Continuar a Comprar"></a>-->
+    <a href="index.php" style="text-decoration:none"><div id="btSetaEsq" class="bt" style="float:left;height:15px;width:165px;"><img id="setaEsq" style="vertical-align:middle;" src="imagens/seta_esq_white_icon.png" width="12" height="12"><span style="vertical-align:middle;"> Continuar a Comprar</span></div></a>
     <br>
     <br>
     <table style="width:100%;">
@@ -58,10 +59,10 @@
                             	<img class="imgPrdt" src="imagens/produtos/<?php echo $row['foto'];?>">
                            	</div>
                       	</td>
-                        <td style="width:325px;border-bottom:1px dotted #F7B27B;vertical-align:middle">
+                        <td class="tableCestoCompras" style="width:325px;vertical-align:middle">
                           	<span class="nomPrdt"><?php echo $row['nome'];?></span>
                       	</td>
-                        <td style="width:50px;border-bottom:1px dotted #F7B27B;vertical-align:middle;">
+                        <td class="tableCestoCompras" style="width:50px;vertical-align:middle;">
                         	<img class="apagarPrdt" src="imagens/trash-icon.png" width="30" height="30" title="Apagar produto" onclick="apagar(<?php echo $cestoComprasId[$i];?>)">
                         </td>
                         <td style="width:150px;text-align:center;border-left:1px solid #F7B27B;vertical-align:middle">
@@ -108,16 +109,16 @@
     </table>
 	</div>
     <br>
-    <table style="width:100%">
+    <table style="width:100%;">
     	<tr style="height:24px;">
-        	<td colspan="2" style="width:600px"></td>
-            <td style="width:100px;text-align:right;padding-right:50px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold">Sub-total</td>
-            <td style="width:100px;text-align:left;padding-left:50px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;"><?php echo "€ ".$precoTotal;?></td>
+        	<td colspan="2" style="width:600px;"></td>
+            <td style="width:105px;text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;">Sub-total</td>
+            <td style="width:101px;text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;"><?php echo "€ ".$precoTotal;?></td>
       	</tr>
         <tr>
-        	<td style="width:450px"></td>
-            <td style="width:70px;padding-left:80px">
-            	<select name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()">
+        	<td style="width:450px;"></td>
+            <td style="width:150px;">
+            	<select style="width:144px;text-align:right;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()">
             		<?php 
 						if (isset($_SESSION['pais'])){
 							$paisId = $_SESSION['pais'];
@@ -149,8 +150,8 @@
 								  ?>
             	</select>
            	</td>
-            <td style="width:100px;text-align:right;padding-right:50px;;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold">Portes</td>
-            <td style="width:100px;text-align:left;padding-left:50px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;">
+            <td style="text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;">Portes</td>
+            <td style="text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;">
 			<?php 
 				if (isset($_SESSION['portes'])){
 					echo "€ ".$_SESSION['portes']; 
@@ -161,8 +162,8 @@
             </td>
         </tr>
         <tr style="height:24px;">
-        	<td colspan="2" style="width:600px"></td>
-            <td style="width:150px;text-align:right;padding-right:50px;;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;text-decoration:underline;">Total</td>
+        	<td colspan="2" style="width:600px;"></td>
+            <td style="text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;text-decoration:underline">Total</td>
             <?php
 				if (isset($_SESSION['portes'])){ 
 					$precoTotalComPortes = $precoTotal + $_SESSION['portes'];
@@ -170,12 +171,13 @@
 					$precoTotalComPortes = $precoTotal;
 				}
 			?>
-            <td style="width:100px;text-align:left;padding-left:50px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:bold;text-decoration:underline;"><?php echo "€ ".$precoTotalComPortes;?></td>
+            <td style="text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:bold;text-decoration:underline;"><?php echo "€ ".$precoTotalComPortes;?></td>
       	</tr>
    	</table>
     <br>
     <br>
-    <a href="comprar.php" style="text-decoration:none"><input style="float:right" type="button" class="bt" value="Finalizar Compra"></a>
+    <!--<input style="float:right" type="button" class="bt" value="Finalizar Compra">-->
+    <a href="comprar.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:146px;"><span style="vertical-align:middle;">Finalizar Compra </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>
     <br><br><br><br>
 	<?php		
 	include"_footer.php";
