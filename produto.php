@@ -40,7 +40,6 @@
         </div>
 	</div>
     <div style="clear:both;"></div>
-    <br><br><br><br><br><br>
 	<?php
 	include "_footer.php";
 ?>

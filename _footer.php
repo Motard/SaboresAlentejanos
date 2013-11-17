@@ -1,5 +1,6 @@
 	</article>
     <div style="clear:both;"></div>
+    <br><br>
     <footer>
     	<div id="footer-banner">
         	<p> &copy; WebDeveloper Paulo Martins 2013<span><a href="mailto:pabm71@gmail.com">pabm71@gmail.com</a>&nbsp;&nbsp;</span></p>

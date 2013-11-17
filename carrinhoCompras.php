@@ -117,7 +117,7 @@
         <tr>
         	<td style="width:400px;"></td>
             <td style="width:200px;">
-            	<select style="width:150px;text-align:right;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()" title="Escolher país de destino">
+            	<select style="width:150px;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()" title="Escolher país de destino">
             		<?php 
 						if (isset($_SESSION['pais'])){
 							$paisId = $_SESSION['pais'];
@@ -177,7 +177,7 @@
     <br>
     <!--<input style="float:right" type="button" class="bt" value="Finalizar Compra">-->
     <a href="comprar.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:149px;"><span style="vertical-align:middle;">Finalizar Compra </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>
-    <br><br><br><br>
+    
 	<?php		
 	include"_footer.php";
 ?>

@@ -390,7 +390,8 @@ textarea {
 	max-height:3em;
 	width:199px;
 	max-width:199px;
-	border:1px solid #302117;	
+	border:1px solid #302117;
+	background-color:rgba(255,183,126,0.3);	
 	}
 .input {
 	border:1px solid #302117;
@@ -651,6 +652,7 @@ select {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:14px;
 	color:#473323;
+	text-align:left;
 	}
 select:focus{
 	border:1px solid #E39932;
@@ -663,14 +665,25 @@ select:focus{
 	width:100%;
 	text-align:center;
 	}
+#semLogin{
+	height:250px;
+	}
+#semLogin p{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#473323;
+	}
+#semLogin a{
+	color:rgba(71,51,2,0.7);
+	}
+#semLogin a:hover{
+	color:rgba(71,51,2,1);
+	}
 #navegador{
 	margin:0px auto;
 	width:600px;
 	height:50px;
 	border-bottom:1px solid grey;
-	}
-#navegador ul {
-
 	}
 #navegador ul li{
 	float:left;
@@ -683,7 +696,10 @@ select:focus{
 	margin:0px auto;
 	text-align:left;
 	padding:30px 20px;
-	background-color:#F3F3F3;
+	background-color:rgba(179,99,35,0.1);
+	border-radius:10px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
 	}
 #continuar {
 	clear:both;

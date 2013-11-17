@@ -5,30 +5,16 @@
 	}
 ?> 
 	<div id="main">
-    <br>
-    <br>
 <?php
 	//********************************************************************************
 	//****************************VER SE FOI FEITO LOGIN******************************
 	//********************************************************************************
 	if (!isset ($_SESSION['login']) || ($_SESSION['login']) == "") {
 		$_SESSION['compras'] = "1";
-		?> 
-        <p>Necessário fazer LOGIN ou CRIAR CONTA</p>
-        <table style="width:100%">
-        	<tr>
-            	<td style="text-align:center">
-                	<a href="mainLogin.php" style="text-decoration:none">
-						<input class="bt" type="button" value="LOGIN">
-                  	</a>
-        		</td>
-                <td style="text-align:center">
-                	<a href="mainRegisto.php" style="text-decoration:none">
-        				<input class="bt" type="button" value="CRIAR CONTA">
-                  	</a>
-        		</td>
-        	</tr>
-        </table>
+		?>
+        <div id="semLogin"> 
+        	<p>Necessário fazer <a href="mainLogin.php">LOGIN</a> ou <a href="mainRegisto.php" >CRIAR CONTA</a>.</p>
+        </div>
 		<?php
 	}else{
 	//********************************************************************************
@@ -49,16 +35,16 @@
 		?>
         <div id="navegador">
             <ul>
-                <li><img src="imagens/1-icon.png"><span>&nbsp;LOCAL ENTREGA</span></li>
-                <li><img src="imagens/2-iconPB.png"><span>&nbsp;FORMA PAGAMENTO</span></li>
-                <li><img src="imagens/3-iconPB.png"><span>&nbsp;REVER ORDEM</span></li>
+                <li><img src="imagens/1-icon.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;LOCAL ENTREGA</span></li>
+                <li><img src="imagens/2-iconPB.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;FORMA PAGAMENTO</span></li>
+                <li><img src="imagens/3-iconPB.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;REVER ORDEM</span></li>
             </ul>
         </div>
         <br>
         <br style="clear:both">
         <br>
         <br>
-        <h3>A morada para entrega é a abaixo indicada:</h3>
+        <h3 style="text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:14px">A morada para entrega é a abaixo indicada:</h3>
     	<br>
         <div id="morada">
         	<?php
@@ -75,23 +61,10 @@
 				echo $row['pais']."<br>";	
 			?> 
 		</div>
-        	<br>
-            <br>
-        	<table style="width:100%">
-            	<tr>
-                	<td style="text-align:center">
-                    	<a href="alteraMor.php?comprar=1" style="text-decoration:none">
-        					<input id="btAlteraMorada" class="bt" type="button" value="ALTERAR MORADA">
-                       	</a>
-       				</td>
-                    <td style="text-align:center">
-                    	<a href="comprar2.php" style="text-decoration:none">
-        					<input id="btContinuar" class="bt" type="button" value="CONTINUAR">
-                       	</a>
-            		</td>
-            	</tr>	
-      		</table>
-		<?php	
+            <a href="alteraMor.php?comprar=1" style="color:#473323;font-family:Verdana, Geneva, sans-serif;font-size:12px;margin-left:-200px">Alterar esta morada?</a>
+        	<br><br>
+            <a href="comprar2.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:99px;"><span style="vertical-align:middle;">Continuar </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>		
+            <?php	
 	}
 	};
 ?> 
