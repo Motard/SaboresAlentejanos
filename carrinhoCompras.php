@@ -18,7 +18,7 @@
             <td style="width:150px;padding:5px 0;">Sub-total</td>
         </tr>
    	</table>
-    <div style="border:1px solid #F7B27B;border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
+    <div style="border:1px solid #F7B27B;border-bottom-left-radius:5px;">
     <table style="width:100%;">
 	<?php
 		ligarBD();
@@ -108,16 +108,15 @@
 	?>
     </table>
 	</div>
-    <br>
     <table style="width:100%;">
     	<tr style="height:24px;">
         	<td colspan="2" style="width:600px;"></td>
-            <td style="width:105px;text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;">Sub-total</td>
-            <td style="width:101px;text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;"><?php echo "€ ".$precoTotal;?></td>
+            <td style="width:106px;text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;border-left:1px solid #F7B27B;">Sub-total</td>
+            <td style="width:101px;text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;border-right:1px solid #F7B27B;"><?php echo "€ ".$precoTotal;?></td>
       	</tr>
         <tr>
-        	<td style="width:450px;"></td>
-            <td style="width:150px;">
+        	<td style="width:400px;"></td>
+            <td style="width:200px;">
             	<select style="width:150px;text-align:right;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()" title="Escolher país de destino">
             		<?php 
 						if (isset($_SESSION['pais'])){
@@ -150,8 +149,8 @@
 								  ?>
             	</select>
            	</td>
-            <td style="text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;">Portes</td>
-            <td style="text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;">
+            <td style="text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;border-left:1px solid #F7B27B;">Portes</td>
+            <td style="text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;border-right:1px solid #F7B27B;">
 			<?php 
 				if (isset($_SESSION['portes'])){
 					echo "€ ".$_SESSION['portes']; 
@@ -163,7 +162,7 @@
         </tr>
         <tr style="height:24px;">
         	<td colspan="2" style="width:600px;"></td>
-            <td style="text-align:right;padding-right:45px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;text-decoration:underline">Total</td>
+            <td style="text-align:right;padding-right:45px;padding-top:10px;padding-bottom:5px;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;text-decoration:underline;border-left:1px solid #F7B27B;border-bottom:1px solid #F7B27B;border-bottom-left-radius:5px;">Total</td>
             <?php
 				if (isset($_SESSION['portes'])){ 
 					$precoTotalComPortes = $precoTotal + $_SESSION['portes'];
@@ -171,13 +170,13 @@
 					$precoTotalComPortes = $precoTotal;
 				}
 			?>
-            <td style="text-align:left;padding-left:49px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:bold;text-decoration:underline;"><?php echo "€ ".$precoTotalComPortes;?></td>
+            <td style="text-align:left;padding-left:49px;padding-bottom:5px;color:#473323;font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:bold;text-decoration:underline;border-right:1px solid #F7B27B;border-bottom:1px solid #F7B27B;border-bottom-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-bottom-right-radius:5px;"><?php echo "€ ".$precoTotalComPortes;?></td>
       	</tr>
    	</table>
     <br>
     <br>
     <!--<input style="float:right" type="button" class="bt" value="Finalizar Compra">-->
-    <a href="comprar.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:146px;"><span style="vertical-align:middle;">Finalizar Compra </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>
+    <a href="comprar.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:149px;"><span style="vertical-align:middle;">Finalizar Compra </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>
     <br><br><br><br>
 	<?php		
 	include"_footer.php";
