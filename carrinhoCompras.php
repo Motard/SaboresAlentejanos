@@ -9,16 +9,16 @@
     <a href="index.php" style="text-decoration:none"><div id="btSetaEsq" class="bt" style="float:left;height:15px;width:165px;"><img id="setaEsq" style="vertical-align:middle;" src="imagens/seta_esq_white_icon.png" width="12" height="12"><span style="vertical-align:middle;"> Continuar a Comprar</span></div></a>
     <br>
     <br>
-    <table style="width:100%;">
-        <tr style="text-align:center;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold">
-            <td style="width:450px;">Descrição do produto</td>
-            <td style="width:150px;">Preço</td>
-            <td style="width:150px;">Quantidade</td>
-            <td style="width:150px;">Sub-total</td>
+    <br>
+    <table style="width:100%;background-color:#F7B27B;border-top-left-radius:5px;border-top-right-radius:5px">
+        <tr style="text-align:center;color:rgba(71,51,35,0.7);font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;">
+            <td style="width:450px;padding:5px 0;">Descrição do produto</td>
+            <td style="width:150px;padding:5px 0;">Preço</td>
+            <td style="width:150px;padding:5px 0;">Quantidade</td>
+            <td style="width:150px;padding:5px 0;">Sub-total</td>
         </tr>
    	</table>
-    <br>
-    <div style="border:1px solid #F7B27B;border-radius:5px;">
+    <div style="border:1px solid #F7B27B;border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
     <table style="width:100%;">
 	<?php
 		ligarBD();
@@ -118,7 +118,7 @@
         <tr>
         	<td style="width:450px;"></td>
             <td style="width:150px;">
-            	<select style="width:144px;text-align:right;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()">
+            	<select style="width:150px;text-align:right;" name="paisEntrega" id="paisEntrega" onchange="actualizaEntrega()" title="Escolher país de destino">
             		<?php 
 						if (isset($_SESSION['pais'])){
 							$paisId = $_SESSION['pais'];
