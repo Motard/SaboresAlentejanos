@@ -35,9 +35,9 @@
 		?>
         <div id="navegador">
             <ul>
-                <li><img src="imagens/1-icon.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;LOCAL ENTREGA</span></li>
-                <li><img src="imagens/2-iconPB.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;FORMA PAGAMENTO</span></li>
-                <li><img src="imagens/3-iconPB.png" style="vertical-align:middle"><span style="vertical-align:middle">&nbsp;REVER ORDEM</span></li>
+                <li><img src="imagens/1-icon.png"><span>&nbsp;LOCAL ENTREGA</span></li>
+                <li><img src="imagens/2-iconPB.png"><span>&nbsp;FORMA PAGAMENTO</span></li>
+                <li><img src="imagens/3-iconPB.png"><span>&nbsp;REVER ORDEM</span></li>
             </ul>
         </div>
         <br>

@@ -7,57 +7,46 @@
 	}
 	?> 
 	<div id="main">
-    <br>
-    <br>
 	<?php	
 	if (!isset ($_SESSION['login']) || ($_SESSION['login']) == "") {
 		$_SESSION['compras'] = "1";
 		?> 
-        <p>Necessário fazer LOGIN ou CRIAR CONTA</p>
-        <table style="width:100%">
-        	<tr>
-            	<td style="text-align:center">
-                	<a href="mainLogin.php" style="text-decoration:none">
-						<input class="bt" type="button" value="LOGIN">
-                  	</a>
-        		</td>
-                <td style="text-align:center">
-                	<a href="mainRegisto.php" style="text-decoration:none">
-        				<input class="bt" type="button" value="CRIAR CONTA">
-                  	</a>
-        		</td>
-        	</tr>
-        </table>
+        <div id="semLogin"> 
+        	<p>Necessário fazer <a href="mainLogin.php">LOGIN</a> ou <a href="mainRegisto.php" >CRIAR CONTA</a>.</p>
+        </div>
 		<?php
 	}else{
 ?> 
     <div id="navegador">
             <ul>
-                <a href="comprar.php"><li><img src="imagens/1-icon.png"><span>&nbsp;LOCAL ENTREGA</span></li></a>
-                <li><img src="imagens/2-icon.png"><span>&nbsp;FORMA PAGAMENTO</span></li>
-                <li><img src="imagens/3-iconPB.png"><span>&nbsp;REVER ORDEM</span></li>
+                <a href="comprar.php"><li><img src="imagens/1-icon.png">&nbsp;<span>LOCAL ENTREGA</span></li></a>
+                <li><img src="imagens/2-icon.png">&nbsp;<span>FORMA PAGAMENTO</span></li>
+                <li><img src="imagens/3-iconPB.png">&nbsp;<span>REVER ORDEM</span></li>
             </ul>
     </div>
-<?php
-
-
-
-
-	echo "ESCOLHER FORMA DE PAGAMENTO <br>";
-?>
 	<br>
-	
-    <form name="" action="<?php echo $_SERVER['PHP_SELF']?>" method="post" onsubmit="return formPagamento()">
-    	<label for="formPag" >Pagamento contra Reembolso</label>
-    	<input class="formpag" name="formPag" type="radio" value="1">
-    	<br>
-    	<label for="formPag" >Pagamento por Transferencia Bancária</label>
-    	<input class="formpag" name="formPag" type="radio" value="2">
-        <br>
-        <br>
-        <br>
-        <input class="bt" name="bt" type="submit" value="Continuar">
-	</form>
+    <br style="clear:both">
+    <br>
+    <br>
+    <h3 style="text-align:left;font-family:Verdana, Geneva, sans-serif;font-size:14px">Escolher forma de pagamento:</h3>
+    <br>
+    <form style="border:none" name="" action="<?php echo $_SERVER['PHP_SELF']?>" method="post" onsubmit="return formPagamento()">
+   		<div id="formPag">
+        	<table style="with:100%">
+            	<tr style="height:30px">
+            		<td><label for="formPag" >Pagamento contra Reembolso</label></td>
+            		<td><input class="formpag" name="formPag" type="radio" value="1"></td>
+            	</tr>
+                <tr style="height:30px">
+                    <td><label for="formPag" >Pagamento por Transferencia Bancária</label></td>
+                    <td><input class="formpag" name="formPag" type="radio" value="2"></td>
+              	</tr>
+         	</table>
+            
+    	</div>
+      	<button id="btSetaDir" class="bt" name="bt" type="submit" style="float:right;"><span style="vertical-align:middle;">Continuar</span> <img id="setaDir" src="imagens/seta_dir_white_icon.png" style="vertical-align:middle;"></button>
+  	</form>
 <?php
 	}
+	include "_footer.php";
 ?>
