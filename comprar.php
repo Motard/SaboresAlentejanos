@@ -61,7 +61,7 @@
 				echo $row['pais']."<br>";	
 			?> 
 		</div>
-            <a href="alteraMor.php?comprar=1" style="color:#473323;font-family:Verdana, Geneva, sans-serif;font-size:12px;margin-left:-200px">Alterar esta morada?</a>
+            <a href="alteraMor.php?comprar=1" style="color:#473323;font-family:Tahoma, Geneva, sans-serif;font-size:14px;margin-left:-200px">Alterar esta morada?</a>
         	<br><br>
             <a href="comprar2.php" style="text-decoration:none"><div id="btSetaDir" class="bt" style="float:right;height:24px;width:99px;"><span style="vertical-align:middle;">Continuar </span><img id="setaDir" style="vertical-align:middle;" src="imagens/seta_dir_white_icon.png" width="25" height="25"></div></a>		
             <?php	

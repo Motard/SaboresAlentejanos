@@ -25,7 +25,7 @@
         </table>
         </form>
         <br>
-      	<a href="recuperaPass.php" style="color:#473323;font-family:Verdana, Geneva, sans-serif;font-size:12px;">Esqueceu-se da sua palavra passe?</a>
+      	<a href="recuperaPass.php" style="color:#473323;font-family:Tahoma, Geneva, sans-serif;font-size:14px;">Esqueceu-se da sua palavra passe?</a>
         <br><br><br>
     </div>
 <?php
