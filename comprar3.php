@@ -115,18 +115,18 @@
                     </table>
                 </div>
                 <div id="custoEncomenda">
-                    <table style="width:196px">
+                    <table style="width:196px;font-family:Verdana, Geneva, sans-serif;font-size:12px;">
                         <tr>
                             <td colspan="2" style="text-align:center;padding:20px 0;background-color:#473323;border-top-left-radius:5px;border-top-right-radius:5px;"><a href="fimCompra.php"><input type="button" class="bt" value="Efectuar Compra" onclick="comprar(4)"></a></td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="padding:25px 0 60px 0">Resumo da encomenda</td>
+                            <td colspan="2" style="padding:25px 0 60px 0;font-size:14px">Resumo da encomenda</td>
                         </tr>
-                        <tr>
-                            <td style="text-align:left;padding-left:5px;padding-bottom:5px">Preço Encomenda:</td>
+                        <tr style="height:20px;">
+                            <td style="text-align:left;padding-left:5px;">Preço Encomenda:</td>
                             <td style="text-align:right;padding-right:5px;"><?php echo "€ ".$_SESSION['precoTotal'];?></td>
                         </tr>
-                        <tr style="border-bottom:2px solid black">
+                        <tr style="height:20px;">
                             <td style="text-align:left;padding-left:5px;padding-bottom:3px">Preço Portes</td>
                             <td style="text-align:right;padding-right:5px;"><?php echo "€ ".$_SESSION['portes'];?></td>
                         </tr>
@@ -135,7 +135,7 @@
                             <td style="text-align:right;padding-right:5px;padding-top:10px;font-weight:bold"><?php echo "€ ".$precoTotal;?></td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="padding-top:20px;">O valor indicado inclui IVA.</td>
+                            <td colspan="2" style="padding-top:40px;padding-left:5px;text-align:left;font-family:Tahoma, Geneva, sans-serif;">O valor indicado inclui IVA.</td>
                         </tr>
                     </table>
                 </div>
@@ -155,9 +155,10 @@
                     <div id="produtos">
                         <table style="width:100%;font-family:Verdana, Geneva, sans-serif;font-size:14px;">
                         <tr style="height:30px;font-weight:600;">
-                        	<td colspan="2" style="padding-bottom:10px;">Produto</td>
-                            <td style="padding-bottom:10px;">Preço</td>
-                            <td style="padding-bottom:10px;">Quantidade</td>
+                        	<td colspan="2" style="padding-bottom:10px;width:50%">Produto</td>
+                            <td style="padding-bottom:10px;width:20%">Preço</td>
+                            <td style="padding-bottom:10px;width:22%">Quantidade</td>
+                            <td style="padding-bottom:10px;width:8%;"></td>
                         </tr> 
                         <?php
                         for ($i=0; $i<$numLinhas; $i++){
@@ -170,14 +171,13 @@
                                     <img style="vertical-align:middle;" class="imgPrdt" src="imagens/produtos/<?php echo $row['foto'];?>">	
                                 </td>
                                 <td style="text-align:left;vertical-align:middle"><?php echo $row['nome']."<br>";?></td>
-                                <td style="vertical-align:middle"><?php echo $row['preco']." €"; ?></td>
+                                <td style="vertical-align:middle;text-align:left;padding-left:57px;"><?php echo "€ ".$row['preco']; ?></td>
                                 <td  style="vertical-align:middle" id="t<?php echo $i;?>">
                                 	<div class="quantFinal">	
 										<?php echo $quantidade[$i]; ?> 
-                                        <br>
-                                        <span class="altera" title="Alterar quantidade" onclick="alteraQtFinal(<?php echo $cestoComprasId[$i];?>,<?php echo $quantidade[$i]; ?>,<?php echo $i;?>)">Alterar</span>&nbsp;&nbsp;&nbsp;<span class="apaga" title="Apagar Item" onclick="apagarFinal(<?php echo $cestoComprasId[$i];?>)">Apagar</span>
                                   	</div>
                                 </td>
+                                <td style="vertical-align:middle;text-align:left;"><span class="altera" title="Alterar quantidade" onclick="alteraQtFinal(<?php echo $cestoComprasId[$i];?>,<?php echo $quantidade[$i]; ?>,<?php echo $i;?>)">Alterar</span><br><span class="apaga" title="Apagar Item" onclick="apagarFinal(<?php echo $cestoComprasId[$i];?>)">Apagar</span></td>
                             </tr>
                             <?php
                             };	

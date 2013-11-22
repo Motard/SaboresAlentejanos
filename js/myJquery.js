@@ -521,7 +521,7 @@ function alteraQtFinal(cestoComprasId,quantidade,inputNum){
 	})
 }
 
-	//*-*-*			FUNÇÃO APAGAR ITEM COMPRAR3.PHP			-*-*-*-*-*-*-*-
+	//*-*-*		FUNÇÃO APAGAR ITEM NO COMPRAR3.PHP			-*-*-*-*-*-*-*-
 	//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 function apagarFinal(id) {
 	$.post("php/apagarItem.php?recalcular",{

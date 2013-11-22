@@ -766,7 +766,7 @@ select:focus{
 	border-radius:5px;
 	/*border:1px solid rgba(198,168,120,0.3);*/
 	margin-left:2px;
-	
+	color:#332519;
 	}
 #produtosEncomenda{
 	width:697px;
@@ -785,13 +785,13 @@ bold {
 	}
 .quantFinal{
 	margin:0 auto;
-	width:70px;
+	width:100px;
 	}
 .alteraQuanFinal {
 	width:10px;
-	height:38px;
+	height:30px;
 	float:left;
-	margin-left:0px;
+	margin-left:10px;
 	margin-top:0px;
 	padding-top:5px;
 	}
@@ -800,22 +800,29 @@ bold {
 	}
 .gravarAlteraQuanFinal {
 	float:right;
-	margin-top:8px;
+	margin-top:5px;
+	margin-left:8px;
 	}
 .gravarAlteraQuanFinal:hover {
 	cursor:pointer;
 	}
 .inputQ{
-	margin-left:0px;
+	margin-left:8px;
 	margin-right:0px;
-	margin-top:10px;
-	width:20px;	
+	margin-top:8px;
+	width:20px;
+	border:1px solid #302117; 
+	background-color:rgba(255,183,126,0.3);
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-align:right;
+	padding-right:5px;
 	}
 .altera{
 	color:#E12519;
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:14px;
-	margin-left:-10px;
+	line-height:20px;
 	}
 .altera:hover{
 	cursor:pointer;
@@ -825,6 +832,7 @@ bold {
 	color:#E12519;
 	font-family:Tahoma, Geneva, sans-serif;
 	font-size:14px;
+	line-height:20px;
 	}
 .apaga:hover{
 	cursor:pointer;
