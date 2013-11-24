@@ -168,7 +168,9 @@
                             ?>
                             <tr>
                                 <td style="width:50px;height:50px;">
-                                    <img style="vertical-align:middle;" class="imgPrdt" src="imagens/produtos/<?php echo $row['foto'];?>">	
+                                	<div class="imagemPrdt">
+                                    	<img style="vertical-align:middle;" class="imgPrdt" src="imagens/produtos/<?php echo $row['foto'];?>">
+                                  	</div>	
                                 </td>
                                 <td style="text-align:left;vertical-align:middle"><?php echo $row['nome']."<br>";?></td>
                                 <td style="vertical-align:middle;text-align:left;padding-left:57px;"><?php echo "€ ".$row['preco']; ?></td>

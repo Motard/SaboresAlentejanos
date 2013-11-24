@@ -21,15 +21,6 @@
 				$valor[$i] = $row['valor'];
 				$i++;			
 			};
-			/*for ($i=0 ; $i<$numLinhas ; $i++) {
-				echo "<br>USER SHOP ID ".$userShopId[$i];
-				echo "<br>DATA ".$dataFinal[$i];
-				echo "<br>FORMA DE PAGAMENTO ".$formaPagamento[$i];
-				echo "<br>ESTADO ".$estado[$i];
-				echo "<br>REFERENCIA ".$ref[$i];
-			}*/
-			//echo "<br><hr>";
-			//ligarBD();
 			for ($i=0 ; $i<$numLinhas ; $i++) {
 				if ($formaPagamento[$i] == 1) {
 					$cmd = "SELECT * FROM old_shop_basket where users_shopId = '$userShopId[$i]'";
@@ -39,7 +30,7 @@
 					while ($row = mysql_fetch_array($recurso)) {
 						$produtoId[$j] = $row['produtoId'];
 						$quantidade[$j] = $row['quantidade'];
-						$data[$j] = $row['data'];
+						/*$data[$j] = $row['data'];*/
 						
 						$j++;		
 					};
@@ -58,17 +49,20 @@
 					<div class="historico">
 						<div class="detalhesOrdem">
                             <p>Data da compra</p>
-                            <p style="font-size:25px"><?php echo $dataFinal[$i];?></p>
+                            <?php
+								$date = strtotime($dataFinal[$i]);
+								$newDate = date('d-M-Y',$date);
+							?>
+                            <p style="font-size:20px;font-weight:600;color:#473323;"><?php echo $newDate;?></p>
                             <br>
-                            <p>Referencia - <?php echo $ref[$i];?></p>
+                            <p>Referencia - <span style="color:#473323;"><?php echo $ref[$i];?></span></p>
                             <br>
-                            <p>Valor - <?php echo "€ ".$valor[$i];?></p>
+                            <p>Valor - <span style="color:#473323;"><?php echo "€ ".$valor[$i];?></span></p>
                         </div>
                         <div class="resumoOrdem">
                         	<p> <?php echo $estadoString;?></p>
 							<hr>
 							<table style="width:100%">
-                           
                         <?php
 						for ($j=0 ; $j<$numProdutos ; $j++){
 							$cmd = "SELECT * FROM produts where id = '$produtoId[$j]'";
@@ -76,11 +70,11 @@
 							while ($row = mysql_fetch_array($recurso)){
 								?> 
 								<tr>
-                                	<td style="width:80px;height:80px;width:25%;padding-bottom:5px;">
+                                	<td style="width:70px;height:70px;padding-bottom:5px;vertical-align:middle">
                                     	<img class="imgPrdt" src="imagens/produtos/<?php echo $row['foto'];?>">	
                                 	</td>
-                                	<td style="font-weight:bold;width:50%"><?php echo $row['nome']."<br>";?></td>
-									<td><?php echo "Quantidade- ".$quantidade[$j];?></td>
+                                	<td style="font-weight:600;vertical-align:middle"><?php echo $row['nome']."<br>";?></td>
+									<td style="width:15%;vertical-align:middle"># <span style="font-weight:600;"><?php echo $quantidade[$j];?></span></td>
 								</tr>
 								<?php	
 							};//end while	
@@ -98,7 +92,7 @@
 					while ($row = mysql_fetch_array($recurso)) {
 						$produtoId[$j] = $row['produtoId'];
 						$quantidade[$j] = $row['quantidade'];
-						$data[$j] = $row['data'];
+						/*$data[$j] = $row['data'];*/
 						$j++;		
 					}
 					switch ($estado[$i]){
@@ -116,11 +110,15 @@
 					<div class="historico">
 						<div class="detalhesOrdem">
                             <p>Data da compra</p>
-                            <p style="font-size:25px"><?php echo $dataFinal[$i];?></p>
+                            <?php
+								$date = strtotime($dataFinal[$i]);
+								$newDate = date('d-M-Y',$date);
+							?>
+                            <p style="font-size:20px;font-weight:600;color:#473323;"><?php echo $newDate;?></p>
                             <br>
-                            <p>Referencia - <?php echo $ref[$i];?></p>
+                            <p>Referencia - <span style="color:#473323;"><?php echo $ref[$i];?></span></p>
                             <br>
-                            <p>Valor - <?php echo "€ ".$valor[$i];?></p>
+                            <p>Valor - <span style="color:#473323;"><?php echo "€ ".$valor[$i];?></span></p>
                         </div>
                         <div class="resumoOrdem">
                         	<p> <?php echo $estadoString;?></p>
@@ -148,14 +146,6 @@
                     	</div> 
 					</div>
 					<?php
-					/*echo "<br>DATA DE COMPRA ".$dataFinal[$i]." - ".$estadoString."<br><hr><hr>";
-					for ($j=0 ; $j<$numProdutos ; $j++){
-						$cmd = "SELECT * FROM produts where id = '$produtoId[$j]'";
-						$recurso = mysql_query($cmd);
-						while ($row = mysql_fetch_array($recurso)){
-							echo $row['nome']." quantidade =".$quantidade[$j]."<br>";	
-						}	
-					}*/
 				}else if ($formaPagamento[$i] == 2 && $estado[$i] != 0){
 					$cmd = "SELECT * FROM old_shop_basket where users_shopId = '$userShopId[$i]'";
 					$recurso = mysql_query($cmd);
@@ -164,7 +154,7 @@
 					while ($row = mysql_fetch_array($recurso)) {
 						$produtoId[$j] = $row['produtoId'];
 						$quantidade[$j] = $row['quantidade'];
-						$data[$j] = $row['data'];
+						/*$data[$j] = $row['data'];*/
 						$j++;		
 					}
 					switch ($estado[$i]){
@@ -182,11 +172,15 @@
 					<div class="historico">
 						<div class="detalhesOrdem">
                             <p>Data da compra</p>
-                            <p style="font-size:25px"><?php echo $dataFinal[$i];?></p>
+                            <?php
+								$date = strtotime($dataFinal[$i]);
+								$newDate = date('d-M-Y',$date);
+							?>
+                            <p style="font-size:20px;font-weight:600;color:#473323;"><?php echo $newDate;?></p>
                             <br>
-                            <p>Referencia - <?php echo $ref[$i];?></p>
+                            <p>Referencia - <span style="color:#473323;"><?php echo $ref[$i];?></span></p>
                             <br>
-                            <p>Valor - <?php echo "€ ".$valor[$i];?></p>
+                            <p>Valor - <span style="color:#473323;"><?php echo "€ ".$valor[$i];?></span></p>
                         </div>
                         <div class="resumoOrdem">
                         	<p> <?php echo $estadoString;?></p>
@@ -214,14 +208,6 @@
                     	</div> 
 					</div>
                     <?php
-					/*echo "<br>DATA DE COMPRA ".$dataFinal[$i]." - ".$estadoString."<br><hr><hr>";
-					for ($j=0 ; $j<$numProdutos ; $j++){
-						$cmd = "SELECT * FROM produts where id = '$produtoId[$j]'";
-						$recurso = mysql_query($cmd);
-						while ($row = mysql_fetch_array($recurso)){
-							echo $row['nome']." quantidade =".$quantidade[$j]."<br>";	
-						}	
-					}*/
 				}	
 			}//end for
 		}

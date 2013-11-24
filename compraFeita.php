@@ -1,9 +1,13 @@
 <?php
 	include "_header.php";
-	
-	echo "Muito obrigado, a sua encomenda foi efetuada<br>";
-	echo "Enviamos-lhe um mail com os dados da sua encomenda.<br>";
-	echo "Qualquer questão relacionada com esta encomenda deve sempre mencionar a seguinte referencia ".$_SESSION['refCompra'];
-	
+?>
+	<div id="mainCompra">
+    	<br><br>
+        <h3>Muito obrigado pela sua encomenda!</h3>
+        <br><br>
+        <p>Foi enviado um e-mail com os detalhes da compra.</p>
+        <p>Qualquer questão relacionada com esta encomenda deverá sempre mencionar a seguinte referência: <bold> <?php echo $_SESSION['refCompra']; ?></bold>.</p>
+   	</div>
+<?php	
 	include "_footer.php";
 ?>

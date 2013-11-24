@@ -150,9 +150,11 @@ header {
 	text-decoration:underline;
 	}
 #logoff {
-	background-color:#CCC;
+	background-color:#473323;
 	border-radius:5px;
-	padding:0 4px;
+	padding-left:6px;
+	padding-right:4px;
+	color:white;
 	}
 #conta {
 	width:120px;
@@ -649,10 +651,12 @@ select {
 	width:150px;
 	border:1px solid #302117;
 	background-color:rgba(255,183,126,0.3);
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
 	color:#473323;
 	text-align:left;
+	padding-top:3px;
+	padding-bottom:3px;
 	}
 select:focus{
 	border:1px solid #E39932;
@@ -739,7 +743,6 @@ select:focus{
 /*################   CSS DO COMPRAR3.PHP   ################*/
 /*########################################################*/	
 #detalhesOrdem{
-	/*border:1px solid rgba(198,168,120,0.1);*/
 	border-radius:5px;
 	width:900px;
 	height:auto;
@@ -752,7 +755,6 @@ select:focus{
 	overflow:visible;
 	float:left;
 	padding:0 5px;
-	/*border:1px solid rgba(198,168,120,0.3);*/
 	border-radius:5px;
 	background-color:rgba(179,99,35,0.3);
 	padding-bottom:10px;
@@ -764,7 +766,6 @@ select:focus{
 	float:right;
 	background-color:rgba(179,99,35,0.3);
 	border-radius:5px;
-	/*border:1px solid rgba(198,168,120,0.3);*/
 	margin-left:2px;
 	color:#332519;
 	}
@@ -775,7 +776,6 @@ select:focus{
 	float:left;
 	background-color:rgba(179,99,35,0.3);
 	border-radius:5px;
-	/*border:1px solid rgba(198,168,120,0.3);*/
 	margin-top:6px;
 	padding-bottom:20px;
 	color:#332519;
@@ -839,27 +839,43 @@ bold {
 	text-decoration:underline;
 	}
 /*########################################################*/
+/*###########  CSS DO COMPRAFEITA.PHP    #################*/
+/*########################################################*/
+#mainCompra{
+	height:300px;
+	text-align:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#332519;
+	}
+#mainCompra p{
+	line-height:1.5;
+	}
+/*########################################################*/
 /*###########  CSS DO CONTACOMPRAS.PHP   #################*/
 /*########################################################*/
 .historico{
 	width:700px;
 	margin:10px auto;
 	overflow:auto;
-	border:1px solid #CCCCCC;
+	border:2px solid #473323;
 	border-radius:5px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+	color:#473323;
 	}
 .detalhesOrdem{
 	width:25%;
 	float:left;
 	padding:5px;
+	color:rgba(71,51,0,0.6);
 	}
 .resumoOrdem{
 	width:70%;
 	float:right;
 	padding:5px;
-	border-left:1px solid #CCC;	
+	border-left:1px solid #473323;	
 	}
-
 /*########################################################
 #############  CSS DO COMPRAFINAL.PHP   ################
 ########################################################
